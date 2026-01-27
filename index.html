@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!index html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get $750 DoorDash Gift Card</title>
+  <title>Get $500 DoorDash Gift Card</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #ff3008; /* DoorDash red */
+      --primary: #ff3008;
       --primary-dark: #e02700;
       --bg: #fff5f2;
       --text: #111;
@@ -56,7 +56,6 @@
       max-width: 100%;
       display: block;
       border-radius: 16px;
-      background: transparent;
     }
 
     h1 {
@@ -120,11 +119,6 @@
       justify-content: center;
     }
 
-    .step strong {
-      display: block;
-      margin-bottom: 2px;
-    }
-
     .final-cta {
       margin-top: 32px;
     }
@@ -134,77 +128,99 @@
       color: #888;
       margin-top: 40px;
     }
+
+    #desktop-message {
+      display: none;
+      text-align: center;
+      padding: 80px 20px;
+    }
   </style>
 </head>
+
 <body>
 
-  <div class="container">
+  <div id="desktop-message">
+    <h2>⚠️ Mobile Device Required</h2>
+    <p>Please visit this page using a mobile phone to continue.</p>
+  </div>
 
-    <div class="brand">DoorDash</div>
+  <div id="mobile-content">
+    <div class="container">
 
-    <div class="card-wrap">
-      <div class="card-mask">
-        <!-- DoorDash gift card image -->
-        <img src="doordash-giftcard.png" alt="DoorDash Gift Card">
+      <div class="brand">DoorDash</div>
+
+      <div class="card-wrap">
+        <div class="card-mask">
+          <img src="doordash-giftcard.png" alt="DoorDash Gift Card">
+        </div>
       </div>
+
+      <h1>Get <span>$500 DoorDash Gift Card</span></h1>
+      <p class="sub">Complete simple sponsored offers & claim your reward!</p>
+
+      <button class="cta" onclick="redirect()">Start Now</button>
+
+      <div class="how">
+        <h2>How It Works</h2>
+
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <strong>Click to Start</strong>
+            <span>Tap the button above to begin your reward journey</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <strong>Enter Your Info</strong>
+            <span>Enter a valid email ID</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <strong>Complete Offers</strong>
+            <span>Complete three to five offers</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">4</div>
+          <div>
+            <strong>Receive Your Reward</strong>
+            <span>Get your DoorDash gift card within 24–48 hours</span>
+          </div>
+        </div>
+
+        <div class="final-cta">
+          <button class="cta" onclick="redirect()">Claim Your DoorDash Gift Card</button>
+        </div>
+      </div>
+
+      <div class="footer">
+        This promotion is not affiliated with or sponsored by DoorDash.
+        Terms & conditions apply.
+      </div>
+
     </div>
-
-    <h1>Get <span>$750 DoorDash Gift Card</span></h1>
-    <p class="sub">Complete simple sponsored offers & claim your reward!</p>
-
-    <button class="cta" onclick="redirect()">Start Now</button>
-
-    <div class="how">
-      <h2>How It Works</h2>
-
-      <div class="step">
-        <div class="num">1</div>
-        <div>
-          <strong>Click to Start</strong>
-          <span>Tap the button above to begin your reward journey</span>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="num">2</div>
-        <div>
-          <strong>Enter Your Info</strong>
-          <span>Provide basic details to verify your eligibility</span>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="num">3</div>
-        <div>
-          <strong>Complete Offers</strong>
-          <span>Finish required sponsor offers to qualify</span>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="num">4</div>
-        <div>
-          <strong>Receive Your Reward</strong>
-          <span>Get your DoorDash gift card within 24–48 hours</span>
-        </div>
-      </div>
-
-      <div class="final-cta">
-        <button class="cta" onclick="redirect()">Claim Your DoorDash Gift Card</button>
-      </div>
-    </div>
-
-    <div class="footer">
-      This promotion is not affiliated with or sponsored by DoorDash.
-      Terms & conditions apply.
-    </div>
-
   </div>
 
   <script>
     function redirect() {
       window.location.href = "https://gloffers.org/aff_c?offer_id=1400&aff_id=17763";
     }
+
+    (function () {
+      var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
+
+      if (!isMobile) {
+        document.getElementById("mobile-content").style.display = "none";
+        document.getElementById("desktop-message").style.display = "block";
+      }
+    })();
   </script>
 
 </body>
