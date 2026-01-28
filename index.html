@@ -218,19 +218,27 @@
   </div>
 
   <script>
-    function redirect() {
-      window.location.href = "https://glctrk.org/aff_c?offer_id=3463&aff_id=17763";
+  function redirect() {
+    if (typeof gtag === 'function') {
+      gtag('event', 'start_now_click', {
+        event_category: 'CTA',
+        event_label: 'DoorDash Gift Card'
+      });
     }
 
-    (function () {
-      var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
+    setTimeout(function () {
+      window.location.href = "https://glctrk.org/aff_c?offer_id=3463&aff_id=17763";
+    }, 200);
+  }
 
-      if (!isMobile) {
-        document.getElementById("mobile-content").style.display = "none";
-        document.getElementById("desktop-message").style.display = "block";
-      }
-    })();
-  </script>
+  (function () {
+    var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
 
+    if (!isMobile) {
+      document.getElementById("mobile-content").style.display = "none";
+      document.getElementById("desktop-message").style.display = "block";
+    }
+  })();
+</script>
 </body>
 </html>
