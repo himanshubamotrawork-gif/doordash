@@ -223,14 +223,12 @@ function redirect() {
   if (clicked) return;
   clicked = true;
 
-  if (typeof gtag === 'function') {
-    gtag('event', 'start_now_click', {
-      event_category: 'CTA',
-      event_label: 'DoorDash Gift Card',
-      transport_type: 'beacon'
-    });
-  }
-
+gtag('event', 'start_now_click', {
+  event_category: 'CTA',
+  event_label: 'DoorDash Gift Card',
+  transport_type: 'beacon',
+  debug_mode: true
+});
   setTimeout(function () {
     window.location.href = "https://glctrk.org/aff_c?offer_id=3463&aff_id=17763";
   }, 900);
