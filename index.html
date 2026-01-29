@@ -216,20 +216,25 @@
 
     </div>
   </div>
-
   <script>
-  function redirect() {
-    if (typeof gtag === 'function') {
-      gtag('event', 'start_now_click', {
-        event_category: 'CTA',
-        event_label: 'DoorDash Gift Card'
-      });
-    }
+let clicked = false;
 
-    setTimeout(function () {
-      window.location.href = "https://glctrk.org/aff_c?offer_id=3463&aff_id=17763";
-    }, 200);
+function redirect() {
+  if (clicked) return;
+  clicked = true;
+
+  if (typeof gtag === 'function') {
+    gtag('event', 'start_now_click', {
+      event_category: 'CTA',
+      event_label: 'DoorDash Gift Card',
+      transport_type: 'beacon'
+    });
   }
+
+  setTimeout(function () {
+    window.location.href = "https://glctrk.org/aff_c?offer_id=3463&aff_id=17763";
+  }, 900);
+}
 
   (function () {
     var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
