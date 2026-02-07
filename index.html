@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get $500 DoorDash Gift Card</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff3008;
+      --primary-dark: #e02700;
+      --bg: #fff5f2;
+      --text: #111;
+      --muted: #666;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: auto;
+      padding: 32px 20px 60px;
+      text-align: center;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 24px;
+      color: var(--primary);
+    }
+
+    .card-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .card-mask {
+      background: var(--bg);
+      padding: 14px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .card-wrap img {
+      width: 260px;
+      max-width: 100%;
+      display: block;
+      border-radius: 16px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin: 0 0 12px;
+    }
+
+    h1 span { color: var(--primary); }
+
+    .sub {
+      color: var(--muted);
+      font-size: 16px;
+      margin-bottom: 28px;
+    }
+
+    .cta {
+      background: linear-gradient(180deg, #ff4d2d, #ff3008);
+      color: #fff;
+      border: none;
+      padding: 18px 36px;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(255,48,8,.35);
+    }
+
+    .cta:hover {
+      background: var(--primary-dark);
+    }
+
+    .how {
+      margin-top: 48px;
+    }
+
+    .how h2 {
+      margin-bottom: 24px;
+    }
+
+    .step {
+      background: #fff;
+      border-radius: 18px;
+      padding: 18px 20px;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 14px;
+      box-shadow: 0 8px 18px rgba(0,0,0,.06);
+      text-align: left;
+    }
+
+    .num {
+      min-width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .final-cta {
+      margin-top: 32px;
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #888;
+      margin-top: 40px;
+    }
+
+    #desktop-message {
+      display: none;
+      text-align: center;
+      padding: 80px 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="desktop-message">
+    <h2>⚠️ Mobile Device Required</h2>
+    <p>Please visit this page using a mobile phone to continue.</p>
+  </div>
+
+  <div id="mobile-content">
+    <div class="container">
+
+      <div class="brand">DoorDash</div>
+
+      <div class="card-wrap">
+        <div class="card-mask">
+          <img src="doordash-giftcard.png" alt="DoorDash Gift Card">
+        </div>
+      </div>
+
+      <h1>Get <span>$500 DoorDash Gift Card</span></h1>
+      <p class="sub">Complete simple sponsored offers & claim your reward!</p>
+
+      <button class="cta" onclick="redirect()">Start Now</button>
+
+      <div class="how">
+        <h2>How It Works</h2>
+
+        <div class="step">
+          <div class="num">1</div>
+          <div>
+            <strong>Click to Start</strong>
+            <span>Tap the button above to begin your reward journey</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">2</div>
+          <div>
+            <strong>Enter Your Info</strong>
+            <span>Enter a valid email ID</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">3</div>
+          <div>
+            <strong>Complete Offers</strong>
+            <span>Complete three to five offers</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num">4</div>
+          <div>
+            <strong>Receive Your Reward</strong>
+            <span>Get your DoorDash gift card within 24–48 hours</span>
+          </div>
+        </div>
+
+        <div class="final-cta">
+          <button class="cta" onclick="redirect()">Claim Your DoorDash Gift Card</button>
+        </div>
+      </div>
+
+      <div class="footer">
+        This promotion is not affiliated with or sponsored by DoorDash.
+        Terms & conditions apply.
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function redirect() {
+      window.location.href = "https://gloffers.org/aff_c?offer_id=1400&aff_id=17763";
+    }
+
+    (function () {
+      var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
+
+      if (!isMobile) {
+        document.getElementById("mobile-content").style.display = "none";
+        document.getElementById("desktop-message").style.display = "block";
+      }
+    })();
+  </script>
+
+</body>
+</html>
