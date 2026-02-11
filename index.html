@@ -6,159 +6,175 @@
   <title>Get $500 DoorDash Gift Card</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #ff3008;
-      --primary-dark: #e02700;
-      --bg: #fff5f2;
-      --text: #111;
-      --muted: #666;
-    }
+:root {
+  --primary: #ff3008;        /* DoorDash red */
+  --primary-dark: #e52806;
+  --bg: #f6f3f2;
+  --card-bg: #ffffff;
+  --steps-bg: #f4f4f4;
+  --text: #1f2937;
+  --muted: #6b7280;
+}
 
-    * { box-sizing: border-box; }
+/* RESET */
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-    }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #f6f3f2, #efe9e7);
+  color: var(--text);
+}
 
-    .container {
-      max-width: 720px;
-      margin: auto;
-      padding: 32px 20px 60px;
-      text-align: center;
-    }
+/* MAIN CARD */
+.container {
+  max-width: 500px;
+  margin: 25px auto;
+  padding: 28px 22px 28px;
+  background: var(--card-bg);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(255, 48, 8, 0.12);
+  text-align: center;
+}
 
-    .brand {
-      font-weight: 700;
-      font-size: 22px;
-      margin-bottom: 24px;
-      color: var(--primary);
-    }
+/* BRAND */
+.brand {
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
 
-    .card-wrap {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 28px;
-    }
+/* IMAGE */
+.card-wrap {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+}
 
-    .card-mask {
-      background: var(--bg);
-      padding: 14px;
-      border-radius: 20px;
-      overflow: hidden;
-    }
+.card-wrap img {
+  width: 200px;
+  max-width: 100%;
+  border-radius: 18px;
+}
 
-    .card-wrap img {
-      width: 260px;
-      max-width: 100%;
-      display: block;
-      border-radius: 16px;
-    }
+/* DIVIDER */
+.container hr {
+  border: none;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 18px 0 22px;
+}
 
-    h1 {
-      font-size: 32px;
-      margin: 0 0 12px;
-    }
+/* HEADLINE */
+h1 {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
 
-    h1 span { color: var(--primary); }
+h1 span {
+  color: var(--primary);
+}
 
-    .sub {
-      color: var(--muted);
-      font-size: 16px;
-      margin-bottom: 28px;
-    }
+.sub {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
 
-    .cta {
-      background: linear-gradient(180deg, #ff4d2d, #ff3008);
-      color: #fff;
-      border: none;
-      padding: 18px 36px;
-      font-size: 18px;
-      font-weight: 700;
-      border-radius: 999px;
-      cursor: pointer;
-      box-shadow: 0 14px 30px rgba(255,48,8,.35);
-    }
+/* STEPS BOX */
+.how {
+  background: var(--steps-bg);
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 22px;
+  text-align: left;
+}
 
-    .cta:hover {
-      background: var(--primary-dark);
-    }
+.how h2 {
+  display: none; /* keeps Amazon-style layout */
+}
 
-    .how {
-      margin-top: 48px;
-    }
+/* STEP ITEM */
+.step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
 
-    .how h2 {
-      margin-bottom: 24px;
-    }
+.step:last-child {
+  margin-bottom: 0;
+}
 
-    .step {
-      background: #fff;
-      border-radius: 18px;
-      padding: 18px 20px;
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      margin-bottom: 14px;
-      box-shadow: 0 8px 18px rgba(0,0,0,.06);
-      text-align: left;
-    }
+.num {
+  min-width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .num {
-      min-width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      background: var(--primary);
-      color: #fff;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.step strong {
+  font-size: 15px;
+  font-weight: 600;
+}
 
-    .final-cta {
-      margin-top: 32px;
-    }
+.step span {
+  display: none; /* cleaner like screenshot */
+}
 
-    .footer {
-      font-size: 12px;
-      color: #888;
-      margin-top: 40px;
-    }
+/* CTA */
+.final-cta {
+  margin-top: 12px;
+}
 
-    #desktop-message {
-      display: none;
-      text-align: center;
-      padding: 80px 20px;
-    }
+.cta {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 18px;
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(255, 48, 8, 0.35);
+  transition: all 0.2s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+}
+
+.footer {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 18px;
+}
+
   </style>
 </head>
 
 <body>
-
-  <div id="desktop-message">
-    <h2>⚠️ Mobile Device Required</h2>
-    <p>Please visit this page using a mobile phone to continue.</p>
-  </div>
-
-  <div id="mobile-content">
     <div class="container">
 
       <div class="brand">DoorDash</div>
 
       <div class="card-wrap">
-        <div class="card-mask">
           <img src="doordash-giftcard.png" alt="DoorDash Gift Card">
         </div>
-      </div>
 
       <h1>Get <span>$500 DoorDash Gift Card</span></h1>
-      <p class="sub">Complete simple sponsored offers & claim your reward!</p>
-
-      <button class="cta" onclick="redirect()">Start Now</button>
+      <p class="sub"></p>
 
       <div class="how">
         <h2>How It Works</h2>
@@ -166,32 +182,32 @@
         <div class="step">
           <div class="num">1</div>
           <div>
-            <strong>Click to Start</strong>
-            <span>Tap the button above to begin your reward journey</span>
+            <strong>Click The Button Below</strong>
+            <span></span>
           </div>
         </div>
 
         <div class="step">
           <div class="num">2</div>
           <div>
-            <strong>Enter Your Info</strong>
-            <span>Enter a valid email ID</span>
+            <strong>Enter Your Basic Info</strong>
+            <span></span>
           </div>
         </div>
 
         <div class="step">
           <div class="num">3</div>
           <div>
-            <strong>Complete Offers</strong>
-            <span>Complete four to five offers</span>
+            <strong>Complete 4 to 5 offers</strong>
+            <span></span>
           </div>
         </div>
 
         <div class="step">
           <div class="num">4</div>
           <div>
-            <strong>Receive Your Reward</strong>
-            <span>Get your DoorDash gift card within 24 hours</span>
+            <strong>Claim Your Giftcard</strong>
+            <span></span>
           </div>
         </div>
 
@@ -214,5 +230,6 @@
 
 </body>
 </html>
+
 
 
